@@ -40,12 +40,12 @@
 
   <!-- <h1>Details</h1>
   <h1>The list data is :{{ l }}</h1> -->
-    <!-- <h1>Details are</h1>
+  <!-- <h1>Details are</h1>
    <p>the name is : {{ name }}</p>
    <p>the age is :{{ age }}</p>
    <p>the location is:{{ location }}</p> -->
 
-   <!-- <table align="center" style="border: 2px solid black; border-collapse: collapse;" border="1" cellspacing="0"
+  <!-- <table align="center" style="border: 2px solid black; border-collapse: collapse;" border="1" cellspacing="0"
     cellpadding="10">
     <tr>
       <th>course id</th>
@@ -61,8 +61,45 @@
     {% endfor %}
 
   </table>  -->
-  <h1>The dictionary data</h1>
-<p>{{ dic }}</p>
+  <!-- <h1>The dictionary data</h1>
+<p>{{ dic }}</p> -->
+
+  <!-- <table>
+  <caption>student_details</caption>
+  <thead>
+    <td>Name</td>
+    <td>Department</td>
+    <td>Email</td>
+    <td>Phone</td>
+  </thead>
+  <tbody>
+    {% for i in student_details %}
+    <tr>
+      <td>{{ i.name }}</td>
+      <td>{{ i.department }}</td>
+      <td>{{ i.email }}</td>
+      <td>{{ i.phone }}</td>
+
+    </tr>
+    {% endfor %}
+  </tbody>
+</table> -->
+
+  <h1>Book List</h1>
+  <table border="1" cellpadding="5">
+    <tr>
+      <th>Author Name</th>
+      <th>Book Name</th>
+      <th>Book Price</th>
+    </tr>
+    {% for i in books %}
+    <tr>
+      <td>{{ i.author.author_name }}</td>
+      <td>{{ i.book_name }}</td>
+      <td>{{ i.book_price }}</td>
+    </tr>
+    {% endfor %}
+  </table>
 
 
 </body>

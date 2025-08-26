@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse 
 import datetime
+from dapp1.models import student_details
+from dapp1.models import author,books
+
 
 # Create your views here.
 # def land(request):
@@ -93,13 +96,24 @@ import datetime
     
 #     return render(request,'land.html',{'l':l})
 
-dic={
-    'name':'pavan',
-    'age':20,
-    'location':'bangalore'
-}
-def dictionary(request):
-    return render(request,'land.html',{'dic':dic})
+# dic={
+#     'name':'pavan',
+#     'age':20,
+#     'location':'bangalore'
+# }
+# def dictionary(request):
+#     return render(request,'land.html',{'dic':dic})
+
+# def b(request):
+#     a=student_details.objects.all()
+#     return render(request,"land.html",{'student_details':a})
+
+def book_list(request):
+    book_data=books.objects.all()
+    return render(request,'land.html',{'books':book_data})
+
+
+
 
 
 

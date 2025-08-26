@@ -31,5 +31,7 @@ urlpatterns = [
     # path('datetime',views.c_datetime),
     # path('',views.details),
     # path('',views.emp_details),
-    path('',views.dictionary),
+    # path('',views.dictionary),
+    # path('',views.b),
+    path('',views.book_list,name='book_list'),
 ]
